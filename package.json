@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "dns": "^0.2.2",
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "util": "^0.12.5"
   }
 }

@@ -2,6 +2,12 @@ const fs = require('fs');
 const dns = require('dns');
 const { promisify } = require('util');
 
+console.log(`
+                            Join Us: https://t.me/Securi3yTalent
+                                   Author: @Securi3yTalent
+`);
+
+
 const readFileAsync = promisify(fs.readFile);
 const writeFileAsync = promisify(fs.writeFile);
 
@@ -13,12 +19,9 @@ if (!targetFilePath) {
   process.exit(1);
 }
 
-(async () => {
-  console.log(`
-                                Join Us: https://t.me/Securi3yTalent
-                                       Author: @Securi3yTalent
-`);
+const sleep = promisify(setTimeout); // Helper function to introduce a delay
 
+const processSites = async () => {
   try {
     const target = (await readFileAsync(targetFilePath, 'utf-8')).split('\n').map((line) => line.trim()).filter(Boolean);
 
@@ -39,9 +42,19 @@ if (!targetFilePath) {
       }
     };
 
-    const promises = target.map((url) => getIP(url));
-    await Promise.all(promises);
+    while (true) {
+      const promises = target.map((url) => getIP(url));
+      await Promise.all(promises);
+
+      // Introduce a delay before processing the sites again
+      // Adjust the delay time based on your needs
+      await sleep(5000); // 5000 milliseconds (5 seconds) delay
+    }
   } catch (error) {
     console.error(`Error: ${error.message}`);
   }
-})();
+};
+
+
+
+processSites();
