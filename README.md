@@ -12,6 +12,10 @@ This is a website extract Domain to IP built using javascript(nodejs)
 
 - [@Securi3yTalent](https://twitter.com/Securi3yTalent)
 
+## Haw to use
+
+- [@Securi3yTalent](https://youtu.be/XpMlYHGINaE)
+
 
 
 ## Deployment
