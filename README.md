@@ -1,7 +1,7 @@
 
-# FIND All HIDDEN LINKS FORM Website
+# Domain TO IP Convert
 
-This is a website extract all URLs scraper built using javascript(nodejs)
+This is a website extract Domain to IP built using javascript(nodejs)
 
 
 
